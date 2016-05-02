@@ -1,7 +1,7 @@
 function [w gamma obj] = fitModel(mu, Mtrain, Btrain)
 % syntax: [w gamma] = fitModel(mu, Mtrain, Btrain)
 % given the tuning param, training data, fit the model and output coeffs and
-% the objective value for the QP. .
+% the objective value for the QP. 
 
 % formulate the QP
 n = size(Btrain,2);
