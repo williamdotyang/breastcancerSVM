@@ -10,7 +10,7 @@ objs = [];
 for idx = 1:numel(mues)
   mu = mues(idx);
   [w gamma obj] = fitModel(mu, Mtrain, Btrain);
-  objs = [objs; obj];
+  objs = [objs obj];
   % evaluate accuracy on the test data
   predictM = Mtest * w - gamma;
   predictB = Btest * w - gamma;
