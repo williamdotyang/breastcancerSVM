@@ -4,4 +4,4 @@ Mtune = tune(find(tune(:,1) == 77), 2:31);
 [missed obj] = evaluate(mu, Mtrain, Btrain, Mtune, Btune)
 % evaluate the model for different mu's
 mues = 5e-5:5e-5:5e-4;
-[missed objs] = evaluate(mues, Mtrain, Btrain, Mtune, Btune)
+[missed errors] = evaluate(mues, Mtrain, Btrain, Mtune, Btune)
