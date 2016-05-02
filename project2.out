@@ -10,23 +10,23 @@ missed =
 
 obj =
 
-    0.0459
+   12.5253
 
 % evaluate the model for different mu's
 mues = 5e-5:5e-5:5e-4;
-[missed objs] = evaluate(mues, Mtrain, Btrain, Mtune, Btune)
+[missed errors] = evaluate(mues, Mtrain, Btrain, Mtune, Btune)
 
 missed =
 
      3     3     2     2     2     2     2     2     2     2
 
 
-objs =
+errors =
 
   Columns 1 through 8
 
-    0.0335    0.0459    0.0542    0.0598    0.0638    0.0675    0.0708    0.0737
+   20.7229   12.5253    9.8485    7.9077    6.9363    6.4997    6.1516    5.0462
 
   Columns 9 through 10
 
-    0.0761    0.0783
+    4.0081    3.5117
