@@ -1,0 +1,56 @@
+echo on; project1
+
+[train, tune, test] = getdata('wdbc.data', 30);
+Btrain_indicies = find(train(:,1) == 66);
+Mtrain_indicies = find(train(:,1) == 77);
+Btrain = train(Btrain_indicies,2:31);
+Mtrain = train(Mtrain_indicies,2:31);
+
+mu = 0.0001;
+% fit the model
+[w gamma obj] = fitModel(mu, Mtrain, Btrain)
+
+w =
+
+   -4.1056
+   -0.1242
+   -3.3016
+   -1.6735
+    2.4501
+   -4.8508
+   -0.3210
+    3.7928
+   -1.2820
+    0.2479
+    4.1126
+   -0.8100
+   -0.3688
+    3.8027
+    0.5084
+   -0.0471
+   -0.1307
+    4.2478
+    0.7133
+   -7.1841
+    6.5976
+    5.0381
+    4.1452
+    8.0556
+   -1.6099
+    0.1599
+   -0.3038
+    0.6853
+    0.6642
+    6.4163
+
+
+gamma =
+
+   -3.5688
+
+
+obj =
+
+    0.0459
+
+diary off
