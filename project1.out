@@ -1,5 +1,3 @@
-echo on; project1
-
 [train, tune, test] = getdata('wdbc.data', 30);
 Btrain_indicies = find(train(:,1) == 66);
 Mtrain_indicies = find(train(:,1) == 77);
@@ -52,5 +50,3 @@ gamma =
 obj =
 
     0.0459
-
-diary off
