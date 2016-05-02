@@ -18,8 +18,10 @@ for idx = 1:numel(mues)
   correctB = (predictB <= 0);
   wrongB = (predictB > 0);
   numMissed = [numMissed sum(wrongM)+sum(wrongB)];
-  err = sum(abs(predictM(find(wrongM == 1))));
-  err = err + sum(abs(predictB(find(wrongB == 1))));
+  m = size(predictM,1); 
+  k = size(predictB,1);
+  err = (1/m)*sum(abs(predictM(find(wrongM == 1))));
+  err = err + (1/k)*sum(abs(predictB(find(wrongB == 1))));
   errors = [errors err];
 end
 end
