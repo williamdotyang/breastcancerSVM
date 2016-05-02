@@ -1,5 +1,3 @@
-type project3
-
 mu = 5e-4;
 minMissed = size(Mtune,1);
 for i = 1:29
@@ -16,7 +14,7 @@ for i = 1:29
   end
 end
 minMissed
-project3
+
 atts  1  2: misclass  14
 atts  1  3: misclass  11
 atts  1  4: misclass  12
@@ -456,5 +454,3 @@ atts 29 30: misclass  30
 minMissed =
 
      3
-
-diary off
