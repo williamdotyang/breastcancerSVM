@@ -1,7 +1,38 @@
+echo on; project2
 Btune = tune(find(tune(:,1) == 66), 2:31);
 Mtune = tune(find(tune(:,1) == 77), 2:31);
 % evaluate the model when mu = 0.0001
 [missed obj] = evaluate(mu, Mtrain, Btrain, Mtune, Btune)
+
+missed =
+
+     3
+
+
+obj =
+
+    0.0459
+
 % evaluate the model for different mu's
 mues = 5e-5:5e-5:5e-4;
 [missed objs] = evaluate(mues, Mtrain, Btrain, Mtune, Btune)
+
+missed =
+
+     3     3     2     2     2     2     2     2     2     2
+
+
+objs =
+
+    0.0335
+    0.0459
+    0.0542
+    0.0598
+    0.0638
+    0.0675
+    0.0708
+    0.0737
+    0.0761
+    0.0783
+
+diary off
