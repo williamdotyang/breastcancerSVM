@@ -8,3 +8,4 @@ plot(Mtest2(:,1),Mtest2(:,2),'+r'), hold on;
 plot(Btest2(:,1),Btest2(:,2),'ob'), hold on;
 plot(xs,ys)
 ylim([-5 5])
+legend('malignant','benign')
